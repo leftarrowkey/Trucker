@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0sfiugqfbbyh"]
+
+[ext_resource type="Texture2D" uid="uid://dm6ns8y1ah3mn" path="res://assets/chap1.png" id="1_u0xol"]
+[ext_resource type="Texture2D" uid="uid://37h6ce6bw4rg" path="res://assets/truck.png" id="2_2c33i"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Chap1" type="Sprite2D" parent="."]
+position = Vector2(11352, 3032)
+scale = Vector2(6.11998, 6.11998)
+texture = ExtResource("1_u0xol")
+
+[node name="Truck" type="Sprite2D" parent="."]
+position = Vector2(9082, 3221)
+scale = Vector2(0.775635, 0.775635)
+texture = ExtResource("2_2c33i")
+flip_h = true
+
+[node name="Camera2D" type="Camera2D" parent="Truck"]
+position = Vector2(-95.1709, 45.4302)
+scale = Vector2(20.2529, 6.44992)
