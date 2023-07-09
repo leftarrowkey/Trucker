@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0sfiugqfbbyh"]
+[gd_scene load_steps=5 format=3 uid="uid://d0sfiugqfbbyh"]
 
 [ext_resource type="Texture2D" uid="uid://dm6ns8y1ah3mn" path="res://assets/chap1.png" id="1_u0xol"]
 [ext_resource type="Texture2D" uid="uid://37h6ce6bw4rg" path="res://assets/truck.png" id="2_2c33i"]
+[ext_resource type="Script" path="res://Truck.gd" id="3_kcb5m"]
+[ext_resource type="Texture2D" uid="uid://boh2h8rljhn1f" path="res://assets/intro.png" id="4_ixncn"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -15,7 +17,13 @@ position = Vector2(9082, 3221)
 scale = Vector2(0.775635, 0.775635)
 texture = ExtResource("2_2c33i")
 flip_h = true
+script = ExtResource("3_kcb5m")
 
 [node name="Camera2D" type="Camera2D" parent="Truck"]
 position = Vector2(-95.1709, 45.4302)
 scale = Vector2(20.2529, 6.44992)
+
+[node name="Intro" type="Sprite2D" parent="."]
+position = Vector2(10142, 3213)
+scale = Vector2(2.12, 2.12)
+texture = ExtResource("4_ixncn")
