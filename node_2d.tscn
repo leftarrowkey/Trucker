@@ -1,19 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0sfiugqfbbyh"]
+[gd_scene load_steps=8 format=3 uid="uid://d0sfiugqfbbyh"]
 
 [ext_resource type="Texture2D" uid="uid://dm6ns8y1ah3mn" path="res://assets/chap1.png" id="1_u0xol"]
 [ext_resource type="Texture2D" uid="uid://37h6ce6bw4rg" path="res://assets/truck.png" id="2_2c33i"]
 [ext_resource type="Script" path="res://Truck.gd" id="3_kcb5m"]
 [ext_resource type="Texture2D" uid="uid://boh2h8rljhn1f" path="res://assets/intro.png" id="4_ixncn"]
+[ext_resource type="Script" path="res://Label.gd" id="4_nal5o"]
+[ext_resource type="Texture2D" uid="uid://bqom1fwhp7g8q" path="res://assets/agent.png" id="5_inrgg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l622l"]
+size = Vector2(1495.55, 841.891)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Chap1" type="Sprite2D" parent="."]
-position = Vector2(11352, 3032)
+position = Vector2(2959.01, 783.358)
 scale = Vector2(6.11998, 6.11998)
 texture = ExtResource("1_u0xol")
 
 [node name="Truck" type="Sprite2D" parent="."]
-position = Vector2(9082, 3221)
+position = Vector2(689.011, 972.358)
 scale = Vector2(0.775635, 0.775635)
 texture = ExtResource("2_2c33i")
 flip_h = true
@@ -23,7 +28,29 @@ script = ExtResource("3_kcb5m")
 position = Vector2(-95.1709, 45.4302)
 scale = Vector2(20.2529, 6.44992)
 
+[node name="Label" type="Label" parent="Truck/Camera2D"]
+offset_left = -182.457
+offset_top = -65.6824
+offset_right = 157.543
+offset_bottom = -39.6824
+scale = Vector2(0.186791, 0.474402)
+pivot_offset = Vector2(184.519, 13.0775)
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("4_nal5o")
+
+[node name="textzone" type="Area2D" parent="Truck"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Truck/textzone"]
+position = Vector2(-90.2625, 41.4399)
+shape = SubResource("RectangleShape2D_l622l")
+
 [node name="Intro" type="Sprite2D" parent="."]
-position = Vector2(10142, 3213)
+position = Vector2(1749.01, 961.358)
 scale = Vector2(2.12, 2.12)
 texture = ExtResource("4_ixncn")
+
+[node name="Agent" type="Sprite2D" parent="."]
+position = Vector2(2990.01, 1015.36)
+scale = Vector2(1.55992, 1.55992)
+texture = ExtResource("5_inrgg")
